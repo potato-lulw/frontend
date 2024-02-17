@@ -1,13 +1,67 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer utilities {
+    .bg-primary {
+        @apply bg-blue-950
+    }
+
+    .bg-secondary {
+        @apply bg-blue-850
+    }
+
+    .text-primary {
+        @apply text-blue-350
+    }
+
+    .text-secondary {
+        @apply text-blue-450
+    }
+
+    .padding-container {
+        @apply  lg:px-48 px-5    
+    }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+.neo {
+    
+    background:  rgba(27, 26, 85, 0.2);
+    box-shadow: inset -29px 29px 41px #535C91,
+        inset 29px -29px 41px #9290C3;
 }
+
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1B1A55;
+    opacity: 50%;
+    /* border-radius: 10px; */
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #9290C3;
+}
+
+
+.blob {
+    
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.7);
+    filter: blur(5px);
+    margin: 10px;
+  }
+  
+  .blob1 {
+    @apply bg-[#a6a4de] w-[20rem] h-[20rem] absolute md:top-[-5%] md:left-[20%] top-10 left-[50%]; 
+  }
+  
+  .blob2 {
+    @apply bg-[#9290C3] w-[10rem] h-[10rem] absolute md:bottom-10 md:left-[60%] bottom-[-10%] left-[10%]; 
+  }

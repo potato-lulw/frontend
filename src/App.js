@@ -1,23 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Glass from "./components/glass";
+import BlobOverlay from "./components/blob";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App bg-primary text-primary min-h-[100vh] max-w-[100vw] padding-container relative md:py-10 py-5 items-center flex flex-col overflow-hidden">
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Glass/>}/>
+        </Routes>
+      </BrowserRouter>
+      <BlobOverlay/>
+      
+      
     </div>
   );
 }
